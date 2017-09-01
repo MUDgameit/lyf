@@ -9,6 +9,8 @@ using namespace std;
 
 Weapon::Weapon(string my_name) {
     name = my_name;
+
+    // 分行读取文件中的数据到数组
     string textline[100];
     int i=0, j=0;
     ifstream fin("weapon.txt");
@@ -24,15 +26,20 @@ Weapon::Weapon(string my_name) {
     char * p;
     int k = 0;
     for(j = 0; j < i; j++) {
+        // 找到与输入名字相同的武器
         if(textline[j].find(name) != string::npos) {
             strcpy(str, textline[j].c_str());
+            // 根据逗号分隔字符串
             p = strtok(str, split);
             while(p != NULL && k < 7) {
+                // 将字符串转换为double型存入数组
                 data[k] = atof(strtok(NULL, split));
                 k++;
             }
         }
     }
+
+    // 为武器属性赋值
     strength = data[0];
     hit_rate = data[1];
     attack_speed = data[2];

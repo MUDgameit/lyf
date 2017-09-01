@@ -15,18 +15,18 @@ public:
     double getAvoidRate();
     double getForceRate();
     double getAttackSpeed();
-    int judgeDistance();
+    int judgeDistance(); // 判断是否为远程武器
     void setEquipment(bool status);
 private:
-    string name;
-    double strength;
-    double hit_rate;
-    double defense;
-    double avoid_rate;
-    double force_rate;
-    double attack_speed;
-    int is_distance;
-    bool has_equip;
+    string name; // 名称
+    double strength; // 力量
+    double hit_rate; // 命中率
+    double defense; // 防御力
+    double avoid_rate; // 回避率
+    double force_rate; // 暴击率
+    double attack_speed; // 攻击速度
+    int is_distance; // 是否为远程武器
+    bool has_equip; // 是否装备
 };
 
 

@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// 输入名字初始化人物属性
 Character::Character(string my_name) {
     name = my_name;
     strength = 20;
@@ -60,6 +61,7 @@ double Character::getInterForce() {
 }
 
 void Character::setWeapon(Weapon * weapon) {
+    // 判断是否已经装备武器
     if(my_weapon == NULL) {
         my_weapon = weapon;
         strength += weapon->getStrength();
@@ -76,6 +78,7 @@ void Character::setWeapon(Weapon * weapon) {
 }
 
 void Character::setShoulder(Equipment * shoulder) {
+    // 判断装备是否为护肩和是否已经装备护肩
     if(shoulder->getCategory() != 1 || my_shoulder != NULL) {
         cout << "装备失败！" << endl;
     }
@@ -89,6 +92,7 @@ void Character::setShoulder(Equipment * shoulder) {
 }
 
 void Character::setChest(Equipment * chest) {
+    // 判断装备是否为胸甲和是否已经装备胸甲
     if(chest->getCategory() != 2 || my_chest != NULL) {
         cout << "装备失败！" << endl;
     }
@@ -102,6 +106,7 @@ void Character::setChest(Equipment * chest) {
 }
 
 void Character::setLeg(Equipment * leg) {
+    // 判断装备是否为护腿和是否装备护腿
     if(leg->getCategory() != 3 || my_leg != NULL) {
         cout << "装备失败！" << endl;
     }
@@ -115,6 +120,7 @@ void Character::setLeg(Equipment * leg) {
 }
 
 void Character::getOffWeapon() {
+    // 判断是否已经装备武器
     if(my_weapon != NULL) {
         strength -= my_weapon->getStrength();
         hit_rate -= my_weapon->getHitRate();
@@ -131,6 +137,7 @@ void Character::getOffWeapon() {
 }
 
 void Character::getOffShoulder() {
+    // 判断是否已经装备护肩
     if(my_shoulder == NULL) {
         cout << "暂未装备任何护肩！" << endl;
     }
@@ -144,6 +151,7 @@ void Character::getOffShoulder() {
 }
 
 void Character::getOffChest() {
+    // 判断是否已经装备胸甲
     if(my_chest == NULL) {
         cout << "暂未装备任何胸甲！" << endl;
     }
@@ -157,6 +165,7 @@ void Character::getOffChest() {
 }
 
 void Character::getOffLeg() {
+    // 判断是否已经装备护腿
     if(my_leg == NULL) {
         cout << "暂未装备任何护腿！" << endl;
     }
@@ -197,6 +206,7 @@ string Character::getLegName() {
         return my_leg->getName();
 }
 
+// 属性加点
 void Character::changeAttributes(int name, double point) {
     switch(name) {
         case 1:
