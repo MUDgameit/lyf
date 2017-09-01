@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1504250147 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+	<stdlib.h>
+	"weapon.h"
+	"equipment.h"
+	"character.h"
+
+1504246150 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.cpp
+	"weapon.h"
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+	<stdlib.h>
+
+1504246150 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.h
+	<string>
+
+1504246223 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.h
+	<string>
+
+1504246223 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.cpp
+	"equipment.h"
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+	<stdlib.h>
+
+1504251186 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.cpp
+	"character.h"
+	"weapon.h"
+	"equipment.h"
+	<iostream>
+	<string>
+
+1504251145 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.h
+	<string>
+	"equipment.h"
+	"weapon.h"
+
