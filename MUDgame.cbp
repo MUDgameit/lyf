@@ -32,11 +32,44 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Article.cpp" />
+		<Unit filename="Article.h" />
+		<Unit filename="Attributes.cpp" />
+		<Unit filename="Attributes.h" />
+		<Unit filename="Bag.cpp" />
+		<Unit filename="Bag.h" />
+		<Unit filename="DemonMountain.cpp" />
+		<Unit filename="DemonMountain.h" />
+		<Unit filename="DemonShrine.cpp" />
+		<Unit filename="DemonShrine.h" />
+		<Unit filename="Error.cpp" />
+		<Unit filename="Error.h" />
+		<Unit filename="GreenCityMountain.cpp" />
+		<Unit filename="GreenCityMountain.h" />
+		<Unit filename="Skill.cpp" />
+		<Unit filename="Skill.h" />
+		<Unit filename="SkyMountain.cpp" />
+		<Unit filename="SkyMountain.h" />
+		<Unit filename="WuDang.cpp" />
+		<Unit filename="WuDang.h" />
 		<Unit filename="character.cpp" />
 		<Unit filename="character.h" />
 		<Unit filename="equipment.cpp" />
 		<Unit filename="equipment.h" />
+		<Unit filename="fighting.cpp" />
+		<Unit filename="fighting.h" />
+		<Unit filename="layer.cpp" />
+		<Unit filename="layer.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="monster.cpp" />
+		<Unit filename="monster.h" />
+		<Unit filename="operating.cpp" />
+		<Unit filename="operating.h" />
+		<Unit filename="task.cpp" />
+		<Unit filename="task.h" />
+		<Unit filename="test.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="weapon.cpp" />
 		<Unit filename="weapon.h" />
 		<Extensions>

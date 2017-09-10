@@ -2,13 +2,14 @@
 #define WEAPON_H_INCLUDED
 
 #include <string>
-
+#include "Article.h"
 using namespace std;
 
-class Weapon {
+class Weapon : public Article{
 public:
     Weapon(string my_name);
     string getName();
+	double getLife() { return 0; }
     double getStrength();
     double getHitRate();
     double getDefense();
@@ -17,6 +18,7 @@ public:
     double getAttackSpeed();
     int judgeDistance(); // 判断是否为远程武器
     void setEquipment(bool status);
+	void showInformation();
 private:
     string name; // 名称
     double strength; // 力量

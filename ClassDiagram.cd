@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Attributes" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Attributes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bag" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAEAAAgAQAAAAAAAAAAACAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Bag.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fighting" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAAAAAAABAAAAAAAAIAAAAAAAAAAAAIAgAAIAAAA=</HashCode>
+      <FileName>fighting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="layer" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgACAIAAAAEAAAgAAAAAEAEAAQACAAAAAAJIAAAAA=</HashCode>
+      <FileName>layer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="monster" Collapsed="true">
+    <Position X="11.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAFBAAAABgAAAAEAAAAgAAAEMAVAAAAAAAAIAAAI=</HashCode>
+      <FileName>monster.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skill" Collapsed="true">
+    <Position X="10" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAIgAAAAoAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAgAiAAAAAESCAIAAgAgAAEAAgAQAAEAAABQAI=</HashCode>
+      <FileName>Weapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Character" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAFAAAZgASEABAAmCAAYAgoBgAAEAAAEQABAIAABKAo=</HashCode>
+      <FileName>character.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemonMountain" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIACACAAAAACAAAAAJAAAAACAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DemonMountain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemonShrine" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACACAAAAACIAAAABAAAEACAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DemonShrine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GreenCityMountain" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACACAAAAACAAAAAFAAAAACAAAAAMAAAAAAAAAA=</HashCode>
+      <FileName>GreenCityMountain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyMountain" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACACAAIAACAAAAABAAAAACAAAAAIAAAAAQAAAA=</HashCode>
+      <FileName>SkyMountain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="task" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQAAABAAAAAAABCAAAAAAAIAAACAAAAAAAAgBAAAA=</HashCode>
+      <FileName>task.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WuDang" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAACACAAAAgCAAAAABAAAAACAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>WuDang.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

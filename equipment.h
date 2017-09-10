@@ -2,10 +2,10 @@
 #define EQUIPMENT_H_INCLUDED
 
 #include <string>
-
+#include "Article.h"
 using namespace std;
 
-class Equipment {
+class Equipment :public Article{
 public:
     Equipment(string my_name);
     string getName();
@@ -14,6 +14,7 @@ public:
     double getAvoidRate();
     double getLife();
     void setEquipment(bool status);
+	void showInformation();
 private:
     string name; // 名称
     int category; // 护肩为1，胸甲为2，护腿为3

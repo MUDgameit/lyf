@@ -72,3 +72,9 @@ void Equipment::setEquipment(bool status) {
     has_equip = status;
 }
 
+void Equipment::showInformation()
+{
+	cout << "Ãû³Æ£º" << this->getName() << "\t" << "ÉúÃü£º" << this->getLife() << "\t" <<
+		"·ÀÓù£º" << this->getDefense() << "\t" << "ÉÁ±Ü£º" << this->getAvoidRate();
+}
+

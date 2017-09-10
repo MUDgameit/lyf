@@ -1,45 +1,213 @@
 # depslib dependency file v1.0
-1504250147 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\main.cpp
+1504855630 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\main.cpp
 	<iostream>
 	<fstream>
 	<string>
 	<string.h>
 	<stdlib.h>
+	"Bag.h"
+	"character.h"
+	"DemonMountain.h"
+	"DemonShrine.h"
+	"Error.h"
+	"equipment.h"
+	"fighting.h"
+	"GreenCityMountain.h"
+	"layer.h"
+	"monster.h"
+	"operating.h"
+	"Skill.h"
+	"SkyMountain.h"
+	"task.h"
+	"weapon.h"
+	"WuDang.h"
+
+1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.cpp
+	"weapon.h"
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+	<stdlib.h>
+
+1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.h
+	<string>
+	"Article.h"
+
+1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.h
+	<string>
+	"Article.h"
+
+1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.cpp
+	"equipment.h"
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+	<stdlib.h>
+
+1504831832 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.cpp
+	"character.h"
 	"weapon.h"
 	"equipment.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+	<Windows.h>
+
+1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.h
+	<string>
+	"equipment.h"
+	"weapon.h"
+
+1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.cpp
+
+1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.cpp
+	"Attributes.h"
+
+1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.h
+
+1504850802 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.cpp
+	"Bag.h"
+	"Article.h"
+
+1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.h
+	"Weapon.h"
+	"equipment.h"
+	"Article.h"
+	<iostream>
+	<string>
+	"operating.h"
+	"character.h"
+	<vector>
+	<limits>
+
+1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.h
+	<string>
+
+1504668808 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.h
+	<iostream>
+	"Error.h"
+	<string>
+	<stdlib.h>
+	"character.h"
+	"task.h"
+	<limits>
+	<Windows.h>
+
+1504658248 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.h
+	<stdexcept>
+
+1504857730 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.h
+	<string>
+	<iostream>
+	<fstream>
+	"operating.h"
+	"character.h"
+	"Error.h"
+	<stdlib.h>
+	<limits>
+
+1505065116 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.cpp
+	"DemonMountain.h"
+
+1504853326 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.h
+	"layer.h"
+	"monster.h"
+	"task.h"
+	"fighting.h"
 	"character.h"
 
-1504246150 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.cpp
-	"weapon.h"
-	<iostream>
-	<fstream>
+1504665484 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.h
 	<string>
-	<string.h>
-	<stdlib.h>
+	"operating.h"
 
-1504246150 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.h
-	<string>
+1504857972 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.cpp
+	"DemonShrine.h"
 
-1504246223 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.h
-	<string>
-
-1504246223 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.cpp
-	"equipment.h"
-	<iostream>
-	<fstream>
-	<string>
-	<string.h>
-	<stdlib.h>
-
-1504251186 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.cpp
+1504839444 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.h
+	"layer.h"
+	"monster.h"
+	"task.h"
+	"fighting.h"
 	"character.h"
-	"weapon.h"
-	"equipment.h"
+
+1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.cpp
+
+1504853326 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.cpp
+	"fighting.h"
+	<time.h>
+	<stdlib.h>
+
+1504853326 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.h
+	<string>
+	<iostream>
+	"monster.h"
+	<cstdlib>
+	"character.h"
+	"Skill.h"
+	<ctime>
+	"task.h"
+
+1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.h
+	<string>
+	<cstring>
+	<cstdlib>
+
+1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.h
 	<iostream>
 	<string>
 
-1504251145 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.h
-	<string>
-	"equipment.h"
-	"weapon.h"
+1504859704 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.cpp
+	"GreenCityMountain.h"
+
+1504839360 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.h
+	"layer.h"
+	"monster.h"
+	"task.h"
+	"fighting.h"
+	"character.h"
+
+1504665484 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.cpp
+	"layer.h"
+	<iostream>
+	<time.h>
+	<stdlib.h>
+
+1504665484 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.h
+	"layer.h"
+	"monster.h"
+	"task.h"
+	"fighting.h"
+	"character.h"
+
+1505048553 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.h
+	"layer.h"
+	"monster.h"
+	"task.h"
+	"fighting.h"
+	"character.h"
+
+1504836270 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.cpp
+	"monster.h"
+	<iostream>
+	<fstream>
+	<time.h>
+
+1504858807 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.cpp
+	"operating.h"
+
+1504831832 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.cpp
+	"Skill.h"
+	<iostream>
+	<Windows.h>
+
+1504859822 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.cpp
+	"SkyMountain.h"
+
+1504857730 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.cpp
+	"task.h"
+
+1505065829 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.cpp
+	"WuDang.h"
 

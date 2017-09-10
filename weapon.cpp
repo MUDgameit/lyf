@@ -85,3 +85,10 @@ int Weapon::judgeDistance() {
 void Weapon::setEquipment(bool status) {
     has_equip = status;
 }
+
+void Weapon::showInformation()
+{
+	cout << "Ãû³Æ£º" << this->getName() << "\t" << "Á¦Á¿£º" << this->getStrength() << "\t" <<
+		"·ÀÓù£º" << this->getDefense() << "\t" << "ÉÁ±Ü£º" << this->getAvoidRate() << "\t" <<
+		"±©»÷£º" << this->getForceRate() << "\t" << "¹¥»÷ËÙ¶È" << this->getAttackSpeed();
+}
