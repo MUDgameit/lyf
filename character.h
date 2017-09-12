@@ -5,12 +5,14 @@
 #include <string>
 #include "equipment.h"
 #include "weapon.h"
-
+#include "Skill.h"
+#include "Bag.h"
 using namespace std;
-
+class Bag;
 class Character {
 public:
-	Character(string my_name);
+	Character(string my_name,Skill*,Bag*);
+	Character();
 	int getLevel();
 	double getStrength();
 	double getHitRate();
@@ -22,6 +24,7 @@ public:
 	double getForceRate();
 	double getInterForce();
 	double getNegative_state_rate();
+	void levelUp();
 	void setWeapon(Weapon * weapon);
 	void setShoulder(Equipment * shoulder);
 	void setChest(Equipment * chest);
@@ -48,6 +51,8 @@ public:
 	void setNegative_state_rate(double);
 	// 力量为1，命中率为2，攻击速度为3，防御力为4，回避率为5，生命值为6，经验值为7，暴击率为8
 	void changeAttributes(int name, double point);
+	Skill * getSkill();
+	Bag * getBag();
 private:
 	string name;
 	int level;
@@ -65,6 +70,8 @@ private:
 	Equipment * my_shoulder;
 	Equipment * my_chest;
 	Equipment * my_leg;
+	Skill * my_skill;
+	Bag * my_bag;
 };
 
 

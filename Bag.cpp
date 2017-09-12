@@ -1,25 +1,40 @@
 #include"Bag.h"
 #include"Article.h"
+#include"Weapon.h"
+#include"equipment.h"
+#include<iostream>
 void Bag::AddWeapon(string name) {
-	bagContent.push_back(new Weapon(name)) ;
+	if (name.find("腿") != string::npos)
+		bagContent.push_back(new Equipment(name));
+	else
+		if (name.find("肩") != string::npos)
+			bagContent.push_back(new Equipment(name));
+		else
+			if (name.find("甲") != string::npos)
+				bagContent.push_back(new Equipment(name));
+			else
+				if (name.find("袍") != string::npos)
+					bagContent.push_back(new Equipment(name));
+				else
+					bagContent.push_back(new Weapon(name));
 }
 void Bag::DeleteWeapon(int id) {
 	//删除指定位置的元素
 	std::vector<Article*>::iterator it = bagContent.begin() + id - 1;
 	bagContent.erase(it);
 }
-void Bag::ShowWeapon( ) {
-	
+void Bag::ShowWeapon(Character& gamer) {
+
 	if (bagContent.size() == 0)
 	{
 		HANDLE consolehwnd;
 		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(consolehwnd, 12);
 		cout << "背包里没有物品！" << endl;
-		SetConsoleTextAttribute(consolehwnd, 9);
+		SetConsoleTextAttribute(consolehwnd, 14);
 		system("pause");
 		system("cls");
-		
+
 		/*operating_user.showMainMenu(gamer);*/
 	}
 	else
@@ -27,13 +42,12 @@ void Bag::ShowWeapon( ) {
 		int number = 0;
 		int i = 0;
 		vector<Article *>::iterator it;
-		for (it = bagContent.begin(); it != bagContent.end(); it++)
+		for (it = bagContent.begin(); it != bagContent.end();)
 		{
 			//每行五个
-			for (i = 0; i < 5; i++)
+			for (i = 0; i < 5 && it != bagContent.end(); it++)
 			{
-				cout << ++number << "：" << *it << "\t";
-				DetialNumber++;
+				cout << ++number << "：" << (*it)->getName() << "\t";
 			}
 			cout << endl;
 		}
@@ -53,9 +67,10 @@ void Bag::ShowWeapon( ) {
 				{
 					if (choice1 == 1)
 					{
-						cout << "输入对应序号(输入0则返回主菜单)：" << endl;
+
 						while (true)
 						{
+							cout << "输入对应序号(输入0则返回主菜单)：" << endl;
 							if (cin >> choice)
 							{
 								if (choice == 0)
@@ -73,7 +88,30 @@ void Bag::ShowWeapon( ) {
 									}
 									else
 									{
-										bagContent[choice - 1]->showInformation();
+									    if(Equipment *equipment = dynamic_cast<Equipment *>(bagContent[choice - 1]))
+                                            cout << equipment << endl;
+                                        else if(Weapon *weapon = dynamic_cast<Weapon *>(bagContent[choice - 1]))
+                                            cout << weapon << endl;
+										cout << "是否装备，1.装备 0.返回" << endl;
+										int choice_ifEquip, equipType;
+										cin >> choice_ifEquip;
+										if (choice_ifEquip == 1)
+										{
+											if (bagContent[choice - 1]->getHas_Equip())
+												cout << "该装备已经装备了" << endl;
+											else
+											{
+												bagContent[choice - 1]->setEquipment(true);
+												equipType = bagContent[choice - 1]->getCategory();
+												switch (equipType)
+												{
+												case 1:gamer.setShoulder(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
+												case 2:gamer.setChest(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
+												case 3:gamer.setLeg(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
+												case 4:gamer.setWeapon(reinterpret_cast<Weapon*>(bagContent[choice - 1])); break;
+												}
+											}
+										}
 									}
 								}
 							}
@@ -98,7 +136,7 @@ void Bag::ShowWeapon( ) {
 					SetConsoleTextAttribute(consolehwnd, 12);
 					throw Error("输入不符合规范");
 				}
-				
+
 			}
 			catch (Error &e) {
 				// 读到非法字符后，输入流将处于出错状态，
@@ -119,9 +157,32 @@ void Bag::ShowWeapon( ) {
 		this->ShowWeapon(operating_user, gamer);*/
 	}
 }
+string Bag::nameOfEquipment(int i)
+{
+	return bagContent[i]->getName();
+}
+void Bag::equipEquipment(string name, Character& gamer)
+{
+	for (int i = 0; i < bagContent.size(); i++)
+	{
+		int equipType;
+		if (bagContent[i]->getName() == name)
+		{
+			bagContent[i]->setEquipment(true);
+			equipType = bagContent[i]->getCategory();
+			switch (equipType)
+			{
+			case 1:gamer.setShoulder(reinterpret_cast<Equipment*>(bagContent[i])); break;
+			case 2:gamer.setChest(reinterpret_cast<Equipment*>(bagContent[i])); break;
+			case 3:gamer.setLeg(reinterpret_cast<Equipment*>(bagContent[i])); break;
+			case 4:gamer.setWeapon(reinterpret_cast<Weapon*>(bagContent[i])); break;
+			}
+		}
+	}
+}
 Bag::Bag() {
-	DetialNumber = 0;
+
 }
 int Bag::getNum() {
-	return DetialNumber;
+	return bagContent.size();
 }

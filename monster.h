@@ -5,7 +5,7 @@
 using namespace std;
 class Monster {
 public:
-	Monster(string,string);
+	Monster(string,string,string);
 	int fighting();
 	int defense(int hurt, int probability);
 	string fall();

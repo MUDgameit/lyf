@@ -12,7 +12,8 @@ public:
 	Skill();
 	void setSkillLearned(int i);
 	bool iflearnt(int i);
-	void LearnSkill(string name);
+	void LearnSkill(int level);
+	string getSkillName(int i);
 	int UseSkill(int name, int force);
 	int getSkilldamage(int i);
 	int getSkillconsumption(int k);

@@ -3,8 +3,9 @@
 #include <fstream>
 #include<time.h>
 using namespace std;
-Monster::Monster(string name,string skillName) {//读文件怪信息
+Monster::Monster(string name,string skillName,string fall) {//读文件怪信息
 	string textline[100];
+	article = fall;
 	int i = 0, j = 0;
 	ifstream fin("monster.txt");
 	while (!fin.eof())
@@ -51,7 +52,8 @@ int Monster::defense(int hurt, int probability) {//返回受到的伤害值
 }
 string Monster::fall() {//返回掉落物品
 	srand(time(NULL));
-	if (1 == rand() % probabilityFall)
+	int probality = rand() % 100 + 1;
+	if (probality < probabilityFall)
 	{
 		return article;
 	}

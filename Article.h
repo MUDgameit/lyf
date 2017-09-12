@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include<iostream>
 using namespace std;
 class Article {
 public:
@@ -11,5 +12,7 @@ public:
 	virtual double getForceRate() = 0;
 	virtual double getAttackSpeed() = 0;
 	virtual double getLife() = 0;
-	virtual void showInformation() = 0;
+	virtual void setEquipment(bool status) = 0;
+	virtual bool getHas_Equip() = 0;
+	virtual int getCategory() = 0;
 };

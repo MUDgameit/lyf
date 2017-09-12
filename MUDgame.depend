@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1504855630 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\main.cpp
+1505235758 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -21,8 +21,10 @@
 	"task.h"
 	"weapon.h"
 	"WuDang.h"
+	"save.h"
+	"mmsystem.h"
 
-1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.cpp
+1505235351 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.cpp
 	"weapon.h"
 	<iostream>
 	<fstream>
@@ -30,15 +32,17 @@
 	<string.h>
 	<stdlib.h>
 
-1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.h
+1505235351 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\weapon.h
 	<string>
+	<iostream>
 	"Article.h"
 
-1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.h
+1505235496 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.h
 	<string>
+	<iostream>
 	"Article.h"
 
-1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.cpp
+1505235611 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\equipment.cpp
 	"equipment.h"
 	<iostream>
 	<fstream>
@@ -46,7 +50,7 @@
 	<string.h>
 	<stdlib.h>
 
-1504831832 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.cpp
+1505233646 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.cpp
 	"character.h"
 	"weapon.h"
 	"equipment.h"
@@ -55,23 +59,28 @@
 	<stdlib.h>
 	<Windows.h>
 
-1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\character.h
 	<string>
 	"equipment.h"
 	"weapon.h"
+	"Skill.h"
+	"Bag.h"
 
-1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.cpp
 
-1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.cpp
 	"Attributes.h"
 
-1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\attributes.h
 
-1504850802 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.cpp
+1505235591 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.cpp
 	"Bag.h"
 	"Article.h"
+	"Weapon.h"
+	"equipment.h"
+	<iostream>
 
-1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\bag.h
 	"Weapon.h"
 	"equipment.h"
 	"Article.h"
@@ -82,10 +91,11 @@
 	<vector>
 	<limits>
 
-1504656838 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.h
+1505234882 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\article.h
 	<string>
+	<iostream>
 
-1504668808 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.h
 	<iostream>
 	"Error.h"
 	<string>
@@ -95,10 +105,10 @@
 	<limits>
 	<Windows.h>
 
-1504658248 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.h
 	<stdexcept>
 
-1504857730 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.h
 	<string>
 	<iostream>
 	<fstream>
@@ -108,38 +118,38 @@
 	<stdlib.h>
 	<limits>
 
-1505065116 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.cpp
 	"DemonMountain.h"
 
-1504853326 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonmountain.h
 	"layer.h"
 	"monster.h"
 	"task.h"
 	"fighting.h"
 	"character.h"
 
-1504665484 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.h
 	<string>
 	"operating.h"
 
-1504857972 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.cpp
 	"DemonShrine.h"
 
-1504839444 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\demonshrine.h
 	"layer.h"
 	"monster.h"
 	"task.h"
 	"fighting.h"
 	"character.h"
 
-1504656838 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\error.cpp
 
-1504853326 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.cpp
 	"fighting.h"
 	<time.h>
 	<stdlib.h>
 
-1504853326 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\fighting.h
 	<string>
 	<iostream>
 	"monster.h"
@@ -149,65 +159,82 @@
 	<ctime>
 	"task.h"
 
-1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.h
 	<string>
 	<cstring>
 	<cstdlib>
 
-1504831832 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.h
 	<iostream>
 	<string>
 
-1504859704 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.cpp
 	"GreenCityMountain.h"
 
-1504839360 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\greencitymountain.h
 	"layer.h"
 	"monster.h"
 	"task.h"
 	"fighting.h"
 	"character.h"
 
-1504665484 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\layer.cpp
 	"layer.h"
 	<iostream>
 	<time.h>
 	<stdlib.h>
 
-1504665484 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.h
 	"layer.h"
 	"monster.h"
 	"task.h"
 	"fighting.h"
 	"character.h"
 
-1505048553 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.h
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.h
 	"layer.h"
 	"monster.h"
 	"task.h"
 	"fighting.h"
 	"character.h"
 
-1504836270 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\monster.cpp
 	"monster.h"
 	<iostream>
 	<fstream>
 	<time.h>
 
-1504858807 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\operating.cpp
 	"operating.h"
 
-1504831832 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skill.cpp
 	"Skill.h"
 	<iostream>
 	<Windows.h>
 
-1504859822 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\skymountain.cpp
 	"SkyMountain.h"
 
-1504857730 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\task.cpp
 	"task.h"
 
-1505065829 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.cpp
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\wudang.cpp
 	"WuDang.h"
+
+1505211267 c:\users\liang\desktop\ѧϰ\c++\q\mudgame\save.h
+	<iostream>
+	<fstream>
+	"character.h"
+	"Bag.h"
+	"Skill.h"
+	"task.h"
+
+1505211267 source:c:\users\liang\desktop\ѧϰ\c++\q\mudgame\save.cpp
+	<iostream>
+	<fstream>
+	"save.h"
+	"character.h"
+	"Bag.h"
+	"Skill.h"
+	"task.h"
 

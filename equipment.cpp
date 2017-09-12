@@ -72,9 +72,15 @@ void Equipment::setEquipment(bool status) {
     has_equip = status;
 }
 
-void Equipment::showInformation()
+bool Equipment::getHas_Equip()
 {
-	cout << "Ãû³Æ£º" << this->getName() << "\t" << "ÉúÃü£º" << this->getLife() << "\t" <<
-		"·ÀÓù£º" << this->getDefense() << "\t" << "ÉÁ±Ü£º" << this->getAvoidRate();
+	return has_equip;
 }
 
+ostream& operator<<(ostream& out, Equipment *equipment)
+{
+    //Equipment *equipment = dynamic_cast<Equipment *>(article);
+    out << "Ãû³Æ£º" << equipment->getName() << "\t" << "ÉúÃü£º" << equipment->getLife() << "\t"
+         << "·ÀÓù£º" << equipment->getDefense() << "\t" << "ÉÁ±Ü£º" << equipment->getAvoidRate();
+    return out;
+}

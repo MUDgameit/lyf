@@ -47,6 +47,7 @@ Weapon::Weapon(string my_name) {
     avoid_rate = data[4];
     force_rate = data[5];
     is_distance = data[6];
+	category = 4;
     has_equip = false;
 }
 
@@ -86,9 +87,21 @@ void Weapon::setEquipment(bool status) {
     has_equip = status;
 }
 
-void Weapon::showInformation()
+bool Weapon::getHas_Equip()
 {
-	cout << "Ãû³Æ£º" << this->getName() << "\t" << "Á¦Á¿£º" << this->getStrength() << "\t" <<
-		"·ÀÓù£º" << this->getDefense() << "\t" << "ÉÁ±Ü£º" << this->getAvoidRate() << "\t" <<
-		"±©»÷£º" << this->getForceRate() << "\t" << "¹¥»÷ËÙ¶È" << this->getAttackSpeed();
+	return has_equip;
+}
+
+ostream& operator<<(ostream& out, Weapon *weapon)
+{
+    //Weapon *weapon = dynamic_cast<Weapon *>(my_article);
+    out << "Ãû³Æ£º" << weapon->getName() << "\t" << "Á¦Á¿£º" << weapon->getStrength() << "\t"
+	     << "·ÀÓù£º" << weapon->getDefense() << "\t" << "ÉÁ±Ü£º" << weapon->getAvoidRate() << "\t"
+	     << "±©»÷£º" << weapon->getForceRate() << "\t" << "¹¥»÷ËÙ¶È£º" << weapon->getAttackSpeed();
+    return out;
+}
+
+int Weapon::getCategory()
+{
+	return category;
 }

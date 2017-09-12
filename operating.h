@@ -8,7 +8,7 @@
 #include<limits>
 #include<Windows.h>
 using namespace std;
-
+class Character;
 class task;
 
 class operating{

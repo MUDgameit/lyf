@@ -65,6 +65,8 @@
 		<Unit filename="monster.h" />
 		<Unit filename="operating.cpp" />
 		<Unit filename="operating.h" />
+		<Unit filename="save.cpp" />
+		<Unit filename="save.h" />
 		<Unit filename="task.cpp" />
 		<Unit filename="task.h" />
 		<Unit filename="test.h">

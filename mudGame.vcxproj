@@ -160,6 +160,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="monster.cpp" />
     <ClCompile Include="operating.cpp" />
+    <ClCompile Include="save.cpp" />
     <ClCompile Include="Skill.cpp" />
     <ClCompile Include="SkyMountain.cpp" />
     <ClCompile Include="task.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="layer.h" />
     <ClInclude Include="monster.h" />
     <ClInclude Include="operating.h" />
+    <ClInclude Include="save.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="SkyMountain.h" />
     <ClInclude Include="task.h" />

@@ -92,7 +92,7 @@ void WuDang::operate(Character * gamer)
                         if (taskState == 5)
                         {
                             cout << smalllayerintroduction[0] << endl;
-                            Monster monster = Monster("·®ïÚÍ·", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("·®ïÚÍ·", "ÆÕÍ¨¹¥»÷","ÌìÓ¥Ö®×¦");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,5);
 
@@ -101,7 +101,7 @@ void WuDang::operate(Character * gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("·®ïÚÍ·", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("·®ïÚÍ·", "ÆÕÍ¨¹¥»÷", "ËþÄÈµÄ¸ÖÌúØ°Ê×");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,5);
                             break;
@@ -112,7 +112,7 @@ void WuDang::operate(Character * gamer)
                         if (taskState == 6)
                         {
                             cout << smalllayerintroduction[1] << endl;
-                            Monster monster = Monster("ÉÐÈ¸»¤·¨", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("ÉÐÈ¸»¤·¨", "ÆÕÍ¨¹¥»÷", "Å®ÍõÓù´ÍØ°Ê×");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,6);
 
@@ -120,7 +120,7 @@ void WuDang::operate(Character * gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("ÉÐÈ¸»¤·¨", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("ÉÐÈ¸»¤·¨", "ÆÕÍ¨¹¥»÷", "õõÆ¤»¤¼ç");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,6);
                             break;
@@ -131,7 +131,7 @@ void WuDang::operate(Character * gamer)
                         if (taskState == 7)
                         {
                             cout << smalllayerintroduction[2] << endl;
-                            Monster monster = Monster("¿Õ¿Õ·½ÕÉ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¿Õ¿Õ·½ÕÉ", "ÆÕÍ¨¹¥»÷", "ºÚê×Ê¯³¤Ç¹");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,7);
 
@@ -139,7 +139,7 @@ void WuDang::operate(Character * gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("¿Õ¿Õ·½ÕÉ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¿Õ¿Õ·½ÕÉ", "ÆÕÍ¨¹¥»÷", "Ä«¸Ö»¤ÍÈ");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,7);
                             break;
@@ -150,7 +150,7 @@ void WuDang::operate(Character * gamer)
                         if (taskState == 8)
                         {
                             cout << smalllayerintroduction[3] << endl;
-                            Monster monster = Monster("Àî¶þ¹·", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("Àî¶þ¹·", "ÆÕÍ¨¹¥»÷", "Á¬ÉäÊÖåó");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,8);
 
@@ -158,7 +158,7 @@ void WuDang::operate(Character * gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("Àî¶þ¹·", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("Àî¶þ¹·", "ÆÕÍ¨¹¥»÷", "Ñ©Ö®ÔÖÄÑ");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,8);
                             break;
@@ -169,7 +169,7 @@ void WuDang::operate(Character * gamer)
                         if (taskState == 9)
                         {
                             cout << smalllayerintroduction[4] << endl;
-                            Monster monster = Monster("¹¬º­ÔÌ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¹¬º­ÔÌ", "ÆÕÍ¨¹¥»÷", "ÎÚ½ðîø¼×");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,9);
                             cout << smalllayerintroduction[5] << endl;
@@ -191,7 +191,7 @@ void WuDang::operate(Character * gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("¹¬º­ÔÌ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¹¬º­ÔÌ", "ÆÕÍ¨¹¥»÷", "ÃÜÖÆÖØåó");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,9);
                             break;

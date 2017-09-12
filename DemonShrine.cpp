@@ -45,19 +45,19 @@ void DemonShrine::operate(Character *gamer)
 		int taskState = point->getNowTask();
 		
 		cout << smalllayerintroduction[0] << endl;
-		Monster monster1("Ä§½Ì³¤ÀÏÒ¼", "ÆÕÍ¨¹¥»÷");
+		Monster monster1("Ä§½Ì³¤ÀÏÒ¼", "ÆÕÍ¨¹¥»÷","Ë«ÈÐ¾Þ½£");
 		system("pause");
 		fighting fight1 = fighting(&monster1, gamer, point, 11);
-		Monster monster2("Ä§½Ì³¤ÀÏ·¡", "ÆÕÍ¨¹¥»÷");
+		Monster monster2("Ä§½Ì³¤ÀÏ·¡", "ÆÕÍ¨¹¥»÷", "Ç§ÄêÐþÌúÊÞÐØ¼×");
 		fighting fight2 = fighting(&monster2, gamer, point, 11);
-		Monster monster3("Ä§½Ì³¤ÀÏÈþ", "ÆÕÍ¨¹¥»÷");
+		Monster monster3("Ä§½Ì³¤ÀÏÈþ", "ÆÕÍ¨¹¥»÷", "Ä§Õ½¸ÖÌúÍÈ¼×");
 		fighting fight3 = fighting(&monster3, gamer, point, 11);
-		Monster monster4("Ä§½Ì³¤ÀÏËÁ", "ÆÕÍ¨¹¥»÷");
+		Monster monster4("Ä§½Ì³¤ÀÏËÁ", "ÆÕÍ¨¹¥»÷", "Áé¶·ÕßµÄ²ÏË¿»¤¼ç");
 		fighting fight4 = fighting(&monster4, gamer, point, 11);
-		Monster monster5("Ä§½Ì³¤ÀÏÎé", "ÆÕÍ¨¹¥»÷");
+		Monster monster5("Ä§½Ì³¤ÀÏÎé", "ÆÕÍ¨¹¥»÷", "¾ÞÊÞÖ®»ê°óÍÈ");
 		fighting fight5 = fighting(&monster5, gamer, point, 11);
 
-		Monster monster6("Ä§½Ì½ÌÖ÷", "ÆÕÍ¨¹¥»÷");
+		Monster monster6("Ä§½Ì½ÌÖ÷", "ÆÕÍ¨¹¥»÷", "×ÏÓÜ°óÍÈ");
 		cout << smalllayerintroduction[6] << endl;
 		cout << "¹§Ï²Í¨¹ý£¡" << endl;
 

@@ -1,32 +1,22 @@
 #include"Skill.h"
 #include<iostream>
 #include<Windows.h>
-void Skill::LearnSkill(string name) {
-	int i;
-	//查询技能情况之后判断学习情况
-	for (i = 0; i < 10; i ++)
-	{
-		if (name == skill[i])
-		{
-			if (!flag[i])
-			{
-				flag[i] = 1;
-				cout << "成功学习此技能" << endl;
-			}
-			else
-			{
-				cout << "该技能已学习" << endl;
-			}
-		}
-	}
-	if (i == 10)
-	{
-		cout << "所选技能不存在" << endl;
-	}
+void Skill::LearnSkill(int level) {
+	flag[level] = 1;
+}
+
+string Skill::getSkillName(int i)
+{
+	return skill[i];
 }
 
 int Skill::UseSkill(int name, int force) {
 	int i=0;
+	if (name > 10)
+	{
+		cout << "不存在该技能！" << endl;
+		return force;
+	}
 	for (i = 0; i < 11; i++)
 	{
 		if (name==i)
@@ -51,11 +41,7 @@ int Skill::UseSkill(int name, int force) {
 				return force;
 			}
 		}
-		else
-		{
-			cout << "不存在该技能！" << endl;
-			return force;
-		}
+	
 	}
 	return force;
 }
@@ -86,7 +72,8 @@ Skill::Skill() {//一共11个技能，普攻代号是0，数组下标就是技能代号
 	skill[9] = "破灭斩", damage[8] = 130, consumption[8] = 50;
 	skill[10] = "横扫八荒", damage[9] = 200, consumption[9] = 80;
 	flag[0] = 1;//初始人物会普攻
-	for (int i = 1; i < 11; i++)
+	flag[1] = 1;
+	for (int i = 2; i < 11; i++)
 	{
 		flag[i] = 0;//初始没有学会技能
 	}

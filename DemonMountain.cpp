@@ -47,21 +47,21 @@ void DemonMountain::operate(Character *gamer)
 		try
 		{
 			cout << smalllayerintroduction[0] << endl;
-			Monster monster1("魔教护法壹", "普通攻击");
+			Monster monster1("魔教护法壹", "普通攻击","烈火炼金护腿");
 			system("pause");
 			fighting fight1 = fighting(&monster1, gamer, point,11);
-			Monster monster2("魔教护法贰", "普通攻击");
+			Monster monster2("魔教护法贰", "普通攻击", "嗜血腿甲");
 			fighting fight2 = fighting(&monster2, gamer, point,11);
-			Monster monster3("魔教护法叁", "普通攻击");
+			Monster monster3("魔教护法叁", "普通攻击", "征战长戟");
 			fighting fight3 = fighting(&monster3, gamer, point,11);
 			cout << smalllayerintroduction[1] << endl;
 			system("pause");
-			Monster monster4("魔教护法肆", "普通攻击");
+			Monster monster4("魔教护法肆", "普通攻击", "蚕纱长袍");
 			fighting fight4 = fighting(&monster4, gamer, point,11);
-			Monster monster5("魔教护法伍", "普通攻击");
+			Monster monster5("魔教护法伍", "普通攻击", "灵龟雕纹胸甲");
 			fighting fight5 = fighting(&monster5, gamer, point,11);
 			cout << smalllayerintroduction[2] << endl;
-			Monster monster6("魔教教主", "普通攻击");
+			Monster monster6("魔教教主", "普通攻击", "断骨长枪");
 			cout << smalllayerintroduction[3] << endl;
 			cout << smalllayerintroduction[4] << endl;
 			cout << smalllayerintroduction[5] << endl;

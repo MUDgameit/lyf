@@ -78,7 +78,7 @@ void GreenCityMountain::operate(Character *gamer)
                         if (taskState == 15)
                         {
                             cout << smalllayerintroduction[0] << endl;
-                            Monster monster = Monster("ÁúÃÅïÚ¾Ö", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("ÁúÃÅïÚ¾Ö", "ÆÕÍ¨¹¥»÷","¶¾ÁúÖ®¹­");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,15);
 
@@ -86,7 +86,7 @@ void GreenCityMountain::operate(Character *gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("ÁúÃÅïÚ¾Ö", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("ÁúÃÅïÚ¾Ö", "ÆÕÍ¨¹¥»÷", "¿ÝÒ¶µ¶");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,15);
                             break;
@@ -97,7 +97,7 @@ void GreenCityMountain::operate(Character *gamer)
                         if (taskState ==16)
                         {
                             cout << smalllayerintroduction[1] << endl;
-                            Monster monster = Monster("°ÜÈ®ÅÉ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("°ÜÈ®ÅÉ", "ÆÕÍ¨¹¥»÷", "³¤µ¶");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,16);
 
@@ -105,7 +105,7 @@ void GreenCityMountain::operate(Character *gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("°ÜÈ®ÅÉ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("°ÜÈ®ÅÉ", "ÆÕÍ¨¹¥»÷", "¼¹¹Ç½£");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,16);
                             break;
@@ -116,7 +116,7 @@ void GreenCityMountain::operate(Character *gamer)
                         if (taskState ==17)
                         {
                             cout << smalllayerintroduction[2] << endl;
-                            Monster monster = Monster("¶ÏÐäÃÅ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¶ÏÐäÃÅ", "ÆÕÍ¨¹¥»÷", "¶¤Í·é³");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,17);
 
@@ -124,7 +124,7 @@ void GreenCityMountain::operate(Character *gamer)
                         }
                         else
                         {
-                            Monster monster = Monster("¶ÏÐäÃÅ", "ÆÕÍ¨¹¥»÷");
+                            Monster monster = Monster("¶ÏÐäÃÅ", "ÆÕÍ¨¹¥»÷", "Ë«ÈÐ¾Þ½£");
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,17);
                             break;

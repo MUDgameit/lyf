@@ -7,7 +7,7 @@
 #include<Windows.h>
 using namespace std;
 
-Character::Character(string my_name) {
+Character::Character(string my_name, Skill*myskill,Bag*mybag) {
 	name = my_name;
 	level = 1;
 	strength = 20;
@@ -23,6 +23,8 @@ Character::Character(string my_name) {
 	my_shoulder = NULL;
 	my_chest = NULL;
 	my_leg = NULL;
+	my_skill = myskill;
+	my_bag = mybag;
 	Negative_state_rate = 0;
 	HANDLE consolehwnd;
 	consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -30,6 +32,11 @@ Character::Character(string my_name) {
 	cout << "创建人物成功！" << endl;
 	system("pause");
 	system("cls");
+}
+
+Character::Character()
+{
+
 }
 
 int Character::getLevel()
@@ -62,6 +69,13 @@ double Character::getLife() {
 }
 double Character::getNegative_state_rate() {
 	return Negative_state_rate;
+}
+void Character::levelUp()
+{
+	level += 1;
+	strength += 5;
+	defense += 5;
+	life += 50;
 }
 double Character::getExperience() {
 	return experience;
@@ -117,69 +131,85 @@ void Character::setInterForce(double i) {
 	 inter_force=i;
 }
 void Character::setWeapon(Weapon * weapon) {
-	if (my_weapon == NULL) {
-		my_weapon = weapon;
-		strength += weapon->getStrength();
-		hit_rate += weapon->getHitRate();
-		attack_speed += weapon->getAttackSpeed();
-		defense += weapon->getDefense();
-		avoid_rate += weapon->getAvoidRate();
-		force_rate += weapon->getForceRate();
-		weapon->setEquipment(true);
-	}
-	else {
-		HANDLE consolehwnd;
-		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(consolehwnd, 12);
-		cout << "装备失败！" << endl;
-	}
+    if(my_weapon != NULL)
+        this->getOffWeapon();
+	my_weapon = weapon;
+    strength += weapon->getStrength();
+    hit_rate += weapon->getHitRate();
+    attack_speed += weapon->getAttackSpeed();
+    defense += weapon->getDefense();
+    avoid_rate += weapon->getAvoidRate();
+    force_rate += weapon->getForceRate();
+    weapon->setEquipment(true);
+    HANDLE consolehwnd;
+    consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(consolehwnd, 12);
+    cout << "装备成功！" << endl;
 }
 
 void Character::setShoulder(Equipment * shoulder) {
-	if (shoulder->getCategory() != 1 || my_shoulder != NULL) {
+	if (shoulder->getCategory() != 1) {
 		HANDLE consolehwnd;
 		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(consolehwnd, 12);
 		cout << "装备失败！" << endl;
 	}
 	else {
+	    if(my_shoulder != NULL)
+            this->getOffShoulder();
 		my_shoulder = shoulder;
 		defense += shoulder->getDefense();
 		avoid_rate += shoulder->getAvoidRate();
 		life += shoulder->getLife();
 		shoulder->setEquipment(true);
+		HANDLE consolehwnd;
+		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(consolehwnd, 12);
+		cout << "装备成功！" << endl;
 	}
 }
 
 void Character::setChest(Equipment * chest) {
-	if (chest->getCategory() != 2 || my_chest != NULL) {
+	if (chest->getCategory() != 2) {
 		HANDLE consolehwnd;
 		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(consolehwnd, 12);
 		cout << "装备失败！" << endl;
 	}
 	else {
+        if(my_chest != NULL)
+            this->getOffChest();
 		my_chest = chest;
 		defense += chest->getDefense();
 		avoid_rate += chest->getAvoidRate();
 		life += chest->getLife();
 		chest->setEquipment(true);
+		HANDLE consolehwnd;
+		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(consolehwnd, 12);
+		cout << "装备成功！" << endl;
 	}
 }
 
 void Character::setLeg(Equipment * leg) {
-	if (leg->getCategory() != 3 || my_leg != NULL) {
+	if (leg->getCategory() != 3) {
 		HANDLE consolehwnd;
 		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(consolehwnd, 12);
 		cout << "装备失败！" << endl;
 	}
 	else {
+        if(my_leg != NULL)
+            this->getOffLeg();
 		my_leg = leg;
 		defense += leg->getDefense();
 		avoid_rate += leg->getAvoidRate();
 		life += leg->getLife();
 		leg->setEquipment(true);
+		HANDLE consolehwnd;
+		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(consolehwnd, 12);
+		cout << "装备成功！" << endl;
 	}
 }
 
@@ -329,6 +359,16 @@ void Character::changeAttributes(int name, double point) {
 		break;
 	}
 	}
+}
+
+Skill * Character::getSkill()
+{
+	return my_skill;
+}
+
+Bag * Character::getBag()
+{
+	return my_bag;
 }
 
 
