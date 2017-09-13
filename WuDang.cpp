@@ -1,6 +1,7 @@
 #include"WuDang.h"
 WuDang::WuDang(string layername, task* point, Character *gamer) :layer(layername), point(point), ifFinishTask(false)
 {
+	//PlaySound(TEXT("b.wav"), NULL, SND_FILENAME | SND_ASYNC);
     system("cls");
     changelayerintroduction("");
     changetreasure("武器");
@@ -26,6 +27,7 @@ WuDang::WuDang(string layername, task* point, Character *gamer) :layer(layername
     smalllayer[2] = "天山天池";
     smalllayer[3] = "";
     operate(gamer);
+	//PlaySound(TEXT("a.wav"), NULL, SND_FILENAME | SND_ASYNC);
 }
 WuDang::~WuDang()
 {
@@ -41,6 +43,10 @@ void WuDang::judgeTask()
 void WuDang::move(int i)
 {
     system("cls");
+
+	HANDLE consolehwnd;
+	consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(consolehwnd, 11);
     cout << smalllayer[i] << endl;
     movestep(i);
     gettreasure();
@@ -56,23 +62,33 @@ void WuDang::operate(Character * gamer)
         switch (taskState)
         {
         case 5:
-            cout << "1.擂台壹\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■" << endl;
+            cout << "■  1.擂台壹 0.返回   ■" << endl;
+            cout << "■■■■■■■■■■■■" << endl;
             mapFlag = 1;
             break;
         case 6:
-            cout << "1.擂台壹\t2.擂台贰\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.擂台壹 2.擂台贰 0.返回  ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■" << endl;
             mapFlag = 2;
             break;
         case 7:
-            cout << "1.擂台壹\t2.擂台贰\t3.擂台叁\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.擂台壹 2.擂台贰 3.擂台叁 0.返回   ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag = 3;
             break;
         case 8:
-            cout << "1.擂台壹\t2.擂台贰\t3.擂台叁\t4.擂台肆\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.擂台壹 2.擂台贰 3.擂台叁 4.擂台肆 0.返回  ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag = 4;
             break;
         default:
-            cout << "1.擂台壹\t2.擂台贰\t3.擂台叁\t4.擂台肆\t5.擂台伍\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.擂台壹 2.擂台贰 3.擂台叁 4.擂台肆 5.擂台伍 0.返回   ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag = 5;
         }
         cout << "请输入你选择的地点：";

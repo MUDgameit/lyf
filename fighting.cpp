@@ -1,8 +1,12 @@
 #include"fighting.h"
 #include<time.h>
 #include<stdlib.h>
+#include <stdio.h>
+#include <dos.h> 
 fighting::fighting(Monster * monster, Character * character, task * taskPoint, int taskNum):monster(monster),character(character)
 {
+	cout << "对战：" << monster->returnName() << endl;
+	
 	skill = character->getSkill();
 	mylife = character->getLife();
 	enemyslife = monster->returnLife();
@@ -40,8 +44,8 @@ void fighting::fight(task* point, int task)
 			else {//没有躲避成功
 				cout << "你被" << monster->returnName() <<//怪物的名字
 					monster->returnSkill() << "攻击,造成" <<//怪物的技能
-					monster->fighting() * (100.0 / (character->getDefense()+100) )<< "伤害" << endl;//直接计算伤害，没有附加效果，伤害计算公式如下
-				mylife -= monster->fighting() * (100.0 / (character->getDefense() + 100));//人物减去血量
+					(int)(monster->fighting() * (100.0 / (character->getDefense()+100)) )<< "伤害" << endl;//直接计算伤害，没有附加效果，伤害计算公式如下
+				mylife -= (int)(monster->fighting() * (100.0 / (character->getDefense() + 100)));//人物减去血量
 			}
 
 			round++;//回合数目加一
@@ -50,12 +54,14 @@ void fighting::fight(task* point, int task)
 			cout << "请选择技能" << endl;
 			this->skill->showSkill();//显示人物已经学会的技能
 			int select=0;//初始化变量
+			bool ifUseForce=true;
 			try {
 				if (cin >> select)//输入选择的技能序号
 				{
 					switch (select)
 					{
-					case 0:break;
+					case 0: ifUseForce = false;
+		              break;
 					case 1:break;
 					case 2:break;
 					case 3:break;
@@ -74,27 +80,34 @@ void fighting::fight(task* point, int task)
 						round--;
 					else
 					{
+						int force1 = force;
 						force = this->skill->UseSkill(select, force);//剩余法力的计算，显示使用该技能之后剩余法力
 						int hurt1 = this->skill->getSkilldamage(select);//伤害的第一部分，是人物使用技能所造成的伤害
 						int hurt2 = 0;
-						if (rand() % 10+1>((int)(character->getHitRate() * 10)))//判断是否命中，没有命中的话直接回合数加一
+						if (ifUseForce == true && force1 == force) {
+							round--;
+						}
+						else if (rand() % 10+1>((int)(character->getHitRate() * 10)))//判断是否命中，没有命中的话直接回合数加一
 						{
 							cout << "你的攻击没有命中！" << endl;
 						}
 						else
 						{
+							
+							//for (int sleep; sleep < 1000000; sleep++);
 							if (1 == rand() % (int)(this->character->getHitRate() * 100))//判断暴击率
 								hurt1 = hurt1 * 2;//如果暴击，第一部分攻击乘以二
 												  //力量给攻击加成，是伤害的第二部分
 							hurt2 = character->getStrength();
 							enemyslife -= hurt1 + hurt2;//怪物减血
 							cout << "你的攻击造成了" << hurt1 + hurt2 << "点伤害！" << endl;
-
+							
 							if ((int)this->character->getNegative_state_rate() == 1)//判断是否有冰冻眩晕状态，如果有的话回合数加一，即跳过怪物的那个回合
 								round++;
 							if (blooding)
 								enemyslife -= 10;//判断是否有持续出血状态，持续出血每一回合怪物血量减10
 						}
+						Sleep(500);
 					}
 					round++;//回合数加一
 				}
@@ -127,14 +140,15 @@ void fighting::fight(task* point, int task)
 		character->setExperience(character->getExperience() + 20);
 	}
 	else if (mylife < 0 || mylife == 0)//反之人物输了，游戏结束
-		cout << "游戏结束" << endl;
+		cout << "游戏结束,你输了！！！！" << endl;
 	system("pause");
 	system("cls");
+	
 	if (character->getExperience() >= 100)
 	{
 		character->setExperience(character->getExperience() - 100);
-		character->getSkill()->LearnSkill(character->getLevel());
 		character->levelUp();
+		character->getSkill()->LearnSkill(character->getLevel());
 		cout << "恭喜升级！你学习到了新技能:" << character->getSkill()->getSkillName(character->getLevel()) << endl;
 	}
 }

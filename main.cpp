@@ -27,8 +27,9 @@ using namespace std;
 int main()
 {
 	//system("..\a.MP3");
-	//PlaySound(TEXT("..\a.MP3"), NULL, SND_FILENAME | SND_ASYNC);
+	//PlaySound(TEXT("a.wav"), NULL, SND_FILENAME | SND_ASYNC);
 	operating operating_user;
+	operating_user.showTitle();
 	//返回值为零则退出游戏
 	int startMenuChoice = operating_user.showStartMenu();
 	//生成人物
@@ -61,6 +62,9 @@ int main()
 		//读取存档
 		else
 		{
+			HANDLE consolehwnd;
+			consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+			SetConsoleTextAttribute(consolehwnd, 14);
 			ifstream file;
 			file.open("name.txt");
 			string name;

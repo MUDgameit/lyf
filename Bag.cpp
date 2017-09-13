@@ -85,6 +85,7 @@ void Bag::ShowWeapon(Character& gamer) {
 										consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 										SetConsoleTextAttribute(consolehwnd, 12);
 										cout << "不存在该装备！请重新输入：" << endl;
+										SetConsoleTextAttribute(consolehwnd, 14);
 									}
 									else
 									{
@@ -105,10 +106,10 @@ void Bag::ShowWeapon(Character& gamer) {
 												equipType = bagContent[choice - 1]->getCategory();
 												switch (equipType)
 												{
-												case 1:gamer.setShoulder(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
-												case 2:gamer.setChest(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
-												case 3:gamer.setLeg(reinterpret_cast<Equipment*>(bagContent[choice - 1])); break;
-												case 4:gamer.setWeapon(reinterpret_cast<Weapon*>(bagContent[choice - 1])); break;
+												case 1:gamer.setShoulder(reinterpret_cast<Equipment*>(bagContent[choice - 1])); cout << "装备成功！" << endl; break;
+												case 2:gamer.setChest(reinterpret_cast<Equipment*>(bagContent[choice - 1])); cout << "装备成功！" << endl; break;
+												case 3:gamer.setLeg(reinterpret_cast<Equipment*>(bagContent[choice - 1])); cout << "装备成功！" << endl; break;
+												case 4:gamer.setWeapon(reinterpret_cast<Weapon*>(bagContent[choice - 1])); cout << "装备成功！" << endl; break;
 												}
 											}
 										}
@@ -121,6 +122,7 @@ void Bag::ShowWeapon(Character& gamer) {
 								consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 								SetConsoleTextAttribute(consolehwnd, 12);
 								throw Error("输入不符合规范");
+								SetConsoleTextAttribute(consolehwnd, 14);
 							}
 						}
 					}
@@ -135,6 +137,7 @@ void Bag::ShowWeapon(Character& gamer) {
 					consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
 					SetConsoleTextAttribute(consolehwnd, 12);
 					throw Error("输入不符合规范");
+					SetConsoleTextAttribute(consolehwnd, 14);
 				}
 
 			}

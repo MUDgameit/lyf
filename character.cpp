@@ -141,10 +141,7 @@ void Character::setWeapon(Weapon * weapon) {
     avoid_rate += weapon->getAvoidRate();
     force_rate += weapon->getForceRate();
     weapon->setEquipment(true);
-    HANDLE consolehwnd;
-    consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(consolehwnd, 12);
-    cout << "装备成功！" << endl;
+   
 }
 
 void Character::setShoulder(Equipment * shoulder) {
@@ -162,10 +159,7 @@ void Character::setShoulder(Equipment * shoulder) {
 		avoid_rate += shoulder->getAvoidRate();
 		life += shoulder->getLife();
 		shoulder->setEquipment(true);
-		HANDLE consolehwnd;
-		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(consolehwnd, 12);
-		cout << "装备成功！" << endl;
+		
 	}
 }
 
@@ -184,10 +178,7 @@ void Character::setChest(Equipment * chest) {
 		avoid_rate += chest->getAvoidRate();
 		life += chest->getLife();
 		chest->setEquipment(true);
-		HANDLE consolehwnd;
-		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(consolehwnd, 12);
-		cout << "装备成功！" << endl;
+		
 	}
 }
 
@@ -206,10 +197,7 @@ void Character::setLeg(Equipment * leg) {
 		avoid_rate += leg->getAvoidRate();
 		life += leg->getLife();
 		leg->setEquipment(true);
-		HANDLE consolehwnd;
-		consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(consolehwnd, 12);
-		cout << "装备成功！" << endl;
+		
 	}
 }
 

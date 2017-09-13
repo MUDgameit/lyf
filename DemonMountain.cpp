@@ -1,5 +1,6 @@
 #include"DemonMountain.h"
 DemonMountain::DemonMountain(string layername, task* point, Character *gamer) :layer(layername), point(point), ifFinishTask(false) {
+	//PlaySound(TEXT("b.wav"), NULL, SND_FILENAME | SND_ASYNC);
 	system("cls");
 	changelayerintroduction("");
 	changetreasure("武器");
@@ -20,6 +21,7 @@ DemonMountain::DemonMountain(string layername, task* point, Character *gamer) :l
 	monstername[4] = "魔教护法伍";
 	monstername[5] = "魔教教主";
 	operate(gamer);
+	//PlaySound(TEXT("a.wav"), NULL, SND_FILENAME | SND_ASYNC);
 }
 DemonMountain::~DemonMountain() {
 
@@ -32,6 +34,10 @@ void DemonMountain::judgeTask() {
 }
 void DemonMountain::move(int i) {
 	system("cls");
+
+	HANDLE consolehwnd;
+	consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(consolehwnd, 11);
 	cout << smalllayer[i] << endl;
 	movestep(i);
 	gettreasure();
@@ -63,30 +69,33 @@ void DemonMountain::operate(Character *gamer)
 			cout << smalllayerintroduction[2] << endl;
 			Monster monster6("魔教教主", "普通攻击", "断骨长枪");
 			cout << smalllayerintroduction[3] << endl;
-			cout << smalllayerintroduction[4] << endl;
-			cout << smalllayerintroduction[5] << endl;
-			while(cout <<"请输入你的选择：") {
-                if(cin >> choice) {
-                    if(choice == 1 || choice == 2) {
-                        point->finishTask(12);
-                        point->finishTask(13);
-                        break;
-                    }
-                    else
-                        cout << "输入不符合规范，请输入数字1-2" << endl;
-                }
-            }
-			if (choice == 1)
+			if (point->getNowTask() <= 12)
 			{
-				cout << smalllayerintroduction[6] << endl;
-			}
-			else
-			{
-				cout << smalllayerintroduction[7] << endl;
+				cout << smalllayerintroduction[4] << endl;
+				cout << smalllayerintroduction[5] << endl;
+				while (cout << "请输入你的选择：") {
+					if (cin >> choice) {
+						if (choice == 1 || choice == 2) {
+							point->finishTask(12);
+							point->finishTask(13);
+							break;
+						}
+						else
+							cout << "输入不符合规范，请输入数字1-2" << endl;
+					}
+				}
+				if (choice == 1)
+				{
+					cout << smalllayerintroduction[6] << endl;
+				}
+				else
+				{
+					cout << smalllayerintroduction[7] << endl;
 
+				}
+				point->finishTask(14);
+				break;
 			}
-			point->finishNowTask(14);
-			break;
 		}
 		catch (Error &e) {
 			// 读到非法字符后，输入流将处于出错状态，
@@ -101,4 +110,5 @@ void DemonMountain::operate(Character *gamer)
 		break;
 
 	}
+
 }

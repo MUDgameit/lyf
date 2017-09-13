@@ -29,9 +29,12 @@ int Skill::UseSkill(int name, int force) {
 					return force;
 
 				}
-				else
+				else if(i!=0)
 				{
 					cout << "ÄÚÁ¦²»×ã£¡" << endl;
+					return force;
+				}
+				else {
 					return force;
 				}
 			}

@@ -36,7 +36,6 @@ Monster::Monster(string name,string skillName,string fall) {//读文件怪信息
 	skill = str;
 	speed = data[3];
 	probabilityFall = data[4];
-	life = 100;
 }
 
 
@@ -53,6 +52,7 @@ int Monster::defense(int hurt, int probability) {//返回受到的伤害值
 string Monster::fall() {//返回掉落物品
 	srand(time(NULL));
 	int probality = rand() % 100 + 1;
+	//probality < probabilityFall
 	if (probality < probabilityFall)
 	{
 		return article;

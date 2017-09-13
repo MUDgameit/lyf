@@ -1,6 +1,7 @@
 #include"SkyMountain.h"
 SkyMountain::SkyMountain(string layername, task* point, Character *gamer) :layer(layername), point(point), ifFinishTask(false)
 {
+	//PlaySound(TEXT("b.wav"), NULL, SND_FILENAME | SND_ASYNC);
     system("cls");
     changelayerintroduction("行至天山脚下。");
     changetreasure("武器");
@@ -20,6 +21,7 @@ SkyMountain::SkyMountain(string layername, task* point, Character *gamer) :layer
     smalllayer[2] = "天山天池";
     smalllayer[3] = "天山山顶";
     operate(gamer);
+	//PlaySound(TEXT("a.wav"), NULL, SND_FILENAME | SND_ASYNC);
 }
 SkyMountain::~SkyMountain()
 {
@@ -35,6 +37,10 @@ void SkyMountain::judgeTask()
 void SkyMountain::move(int i)
 {
     system("cls");
+
+	HANDLE consolehwnd;
+	consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(consolehwnd, 11);
     cout << smalllayer[i] << endl;
     movestep(i);
     gettreasure();
@@ -49,19 +55,27 @@ void SkyMountain::operate(Character * gamer)
         switch (taskState)
         {
         case 1:
-            cout << "1.天山山脚\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■" << endl;
+            cout << "■  1.天山山脚 0.返回   ■" << endl;
+            cout << "■■■■■■■■■■■■■" << endl;
             mapFlag =1;
             break;
         case 2:
-            cout << "1.天山山脚\t2.天山山麓\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.天山山脚 2.天山山麓 0.返回    ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag =2;
             break;
         case 3:
-            cout << "1.天山山脚\t2.天山山麓\t3.天山天池\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.天山山脚 2.天山山麓 3.天山天池 0.返回   ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag =3;
             break;
         default :
-            cout << "1.天山山脚\t2.天山山麓\t3.天山天池\t4.天山山顶\t0.返回" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+            cout << "■  1.天山山脚 2.天山山麓 3.天山天池 4.天山山顶 0.返回  ■" << endl;
+            cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
             mapFlag =4;
             break;
         }
@@ -140,7 +154,7 @@ void SkyMountain::operate(Character * gamer)
                         {
                             cout << smalllayerintroduction[3];
                             Monster monster = Monster("天山老怪", "普通攻击","玄铁爪");
-							
+
                             system("pause");
                             fighting fight = fighting(&monster, gamer, point,4);
 							cout << smalllayerintroduction[4];

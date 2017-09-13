@@ -19,4 +19,5 @@ public:
 	int showMainMenu(Character &);
 	int showMap(task &);
 	int showStory(Character &);
+	void showTitle();
 };

@@ -4,10 +4,37 @@ operating::operating()
 {
 }
 
+void operating::showTitle() {
+    HANDLE consolehwnd;
+    consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(consolehwnd, 14);
+    cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+    cout << "■　 ■■　　　　■　　　　　　　　■　　　■　　　　　　　　■　　■　　　　　　　■　　　■　　■■■   ■" << endl;
+    cout << "■　　■■■■　■■■■■　　■■■■■■　■　　■　　　■　■　■■■■■■　　■■　■　■　　■　■  ■" << endl;
+    cout << "■　■　　■　　■　　■　　　　　■■　　■　　■　　　　■　■■■　　　■　　　■■　■■■■■■　■  ■" << endl;
+    cout << "■　　　　　　　　　　　　　　　　■■　　■　　■　　　　　■■　　　■■　　　　　■　　　■　　■■■  ■" << endl;
+    cout << "■　　　■■■■■■■　　　　■■■■■■　■　■　　　■■　■　　■■　　　　　■■■　　■　　■　■  ■" << endl;
+    cout << "■　　　　　　■　　　　　　　　　■　　　　■■　　　　　　　■　■　　　　　　　　■　　■■■　■　■  ■" << endl;
+    cout << "■　　　　　　■■　　　　　　　■　　■　　■■　　　　　　　　　■　　　■　　　■■■■■　■　■■■  ■" << endl;
+    cout << "■　　　　　■■■　　　　　　■■　　■　■■　■■　　■■■■■■■■■　　　　■■　　■　■　　　■  ■" << endl;
+    cout << "■　　　　　■　■■　　　　　　　　　　　　　　　　　　　　　■　■　■　　　　　　■　　■■■■　　■  ■" << endl;
+    cout << "■　　　　■■　　■■■　　　　■　　■　■■　■　　　　　■　　■　　■■　　　　■　　■　　■　　■  ■" << endl;
+    cout << "■　　■■　　　　　　■■　　■■　　■　　■　　■　　　■　　■■　　　　■　　　■　　　　■　　■　  ■" << endl;
+    cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+}
+
 int operating::showStartMenu()
 {
 	int choice;
-	while(cout << "1.开始游戏  2.读取存档  3.退出" << endl << "请输入你的选择：") {
+	HANDLE consolehwnd;
+    consolehwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(consolehwnd, 14);
+	cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+	cout << "■                                                                                                        ■" << endl;
+	cout << "■                           1.开始游戏        2.读取存档        3.退出                                   ■" << endl;
+	cout << "■                                                                                                        ■" << endl;
+	cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+	while(cout << "请输入你的选择：") {
 	    try {
             if (cin >> choice)
             {
@@ -36,6 +63,12 @@ int operating::showStartMenu()
 
             system("cls");
         }
+        showTitle();
+        cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
+        cout << "■                                                                                                        ■" << endl;
+        cout << "■                           1.开始游戏        2.读取存档        3.退出                                   ■" << endl;
+        cout << "■                                                                                                        ■" << endl;
+        cout << "■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■" << endl;
 	}
 
 	return choice;
@@ -50,7 +83,7 @@ string operating::getGamerName()
 	{
 		cin >> name;
 		//长度不超过五，不含空格
-		if (name.length() < 6 || name.find(" ") != std::string::npos)
+		if (name.length() <= 10 || name.find(" ") != std::string::npos)
 		{
 			return name;
 		}
@@ -78,14 +111,18 @@ string operating::getGamerName()
 
 int operating::showMainMenu(Character & gamer)
 {
-	cout << "角色名字：" << gamer.getName() << "\t" << "等级：" << gamer.getLevel() << endl;
-	cout << "生命：" << gamer.getLife() << "\t" << "内力：100" << "\t" << "经验：" << gamer.getExperience() << endl;
-	cout << "武器：" << gamer.getWeaponName() << "\t" << "头盔：" << gamer.getShoulderName() << "\t" <<
-		"铠甲：" << gamer.getChestName() << "\t" << "护腿：" << gamer.getLegName() << endl;
-	cout << "力量：" << gamer.getStrength() << "\t" << "防御：" << gamer.getDefense() << "\t" <<
-		"命中率：" << gamer.getHitRate() << "\t" << "暴击率：" << gamer.getForceRate() << "\t" <<
-		"闪避率：" << gamer.getAvoidRate() << "\t" << "攻速：" << gamer.getAttackSpeed() << endl;
-	cout << "1.地图\t2.背包\t3.任务\t4.退出" << endl;
+    cout.setf(std::ios::left);
+    cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
+    cout << "角色名字：" << gamer.getName() << "\t" << "等级：" << gamer.getLevel() << endl;
+    cout << "生命：" << gamer.getLife() << "\t" << "内力：100" << endl;
+    cout << "经验：" << gamer.getExperience() << "\t" << "武器：" << gamer.getWeaponName() << endl;
+    cout << "头盔：" << gamer.getShoulderName() << "\t" << "铠甲：" << gamer.getChestName() << endl;
+    cout << "护腿：" << gamer.getLegName() << "\t" << "力量：" << gamer.getStrength() << endl;
+    cout << "防御：" << gamer.getDefense() << "\t" << "命中率：" << gamer.getHitRate() << endl;
+    cout << "暴击率：" << gamer.getForceRate() << "\t" << "闪避率：" << gamer.getAvoidRate() << endl;
+    cout << "攻速：" << gamer.getAttackSpeed() << endl;
+    cout << "1.地图\t2.背包\t3.任务\t4.退出" << endl;
+    cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
 	int choice;
 	while(cout << "请输入你的操作（1-4）" << endl) {
 	    try {
@@ -116,14 +153,17 @@ int operating::showMainMenu(Character & gamer)
             system("pause");
             system("cls");
         }
+        cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
         cout << "角色名字：" << gamer.getName() << "\t" << "等级：" << gamer.getLevel() << endl;
-        cout << "生命：" << gamer.getLife() << "\t" << "内力：100" << "\t" << "经验：" << gamer.getExperience() << endl;
-        cout << "武器：" << gamer.getWeaponName() << "\t" << "头盔：" << gamer.getShoulderName() << "\t" <<
-            "铠甲：" << gamer.getChestName() << "\t" << "护腿：" << gamer.getLegName() << endl;
-        cout << "力量：" << gamer.getStrength() << "\t" << "防御：" << gamer.getDefense() << "\t" <<
-            "命中率：" << gamer.getHitRate() << "\t" << "暴击率：" << gamer.getForceRate() << "\t" <<
-            "闪避率：" << gamer.getAvoidRate() << "\t" << "攻速：" << gamer.getAttackSpeed() << endl;
+        cout << "生命：" << gamer.getLife() << "\t" << "内力：100" << endl;
+        cout << "经验：" << gamer.getExperience() << "\t" << "武器：" << gamer.getWeaponName() << endl;
+        cout << "头盔：" << gamer.getShoulderName() << "\t" << "铠甲：" << gamer.getChestName() << endl;
+        cout << "护腿：" << gamer.getLegName() << "\t" << "力量：" << gamer.getStrength() << endl;
+        cout << "防御：" << gamer.getDefense() << "\t" << "命中率：" << gamer.getHitRate() << endl;
+        cout << "暴击率：" << gamer.getForceRate() << "\t" << "闪避率：" << gamer.getAvoidRate() << endl;
+        cout << "攻速：" << gamer.getAttackSpeed() << endl;
         cout << "1.地图\t2.背包\t3.任务\t4.退出" << endl;
+        cout << "■■■■■■■■■■■■■■■■■■■■■" << endl;
 	}
 	return 0;
 }
@@ -149,7 +189,7 @@ int operating::showMap(task &myTask)
 			}
 			else
 			{
-				if (numberOfTask < 20)
+				if (numberOfTask < 19)
 				{
 					cout << "1.天山\t2.武当\t3.魔教睥睨山\t4.青城山" << endl;
 				}
@@ -165,7 +205,7 @@ int operating::showMap(task &myTask)
 	try {
 		if (cin >> choice)
 		{
-		    if((numberOfTask < 5 && choice > 1) || (numberOfTask < 11 && choice > 2) || (numberOfTask < 15 && choice > 3) || (numberOfTask < 20 && choice > 4) || choice > 5) {
+		    if((numberOfTask < 5 && choice > 1) || (numberOfTask < 11 && choice > 2) || (numberOfTask < 15 && choice > 3) || (numberOfTask < 19 && choice > 4) || choice > 5) {
                 cout << "该地图不存在！" << endl;
 		    }
 		    else {
@@ -257,7 +297,7 @@ int operating::showStory(Character &amy)
 	int choice;
 	while (true)
 	{
-		try 
+		try
 		{
 			if (cin >> choice)
 			{
